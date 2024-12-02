@@ -1,0 +1,937 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto+Slab:wght@500;600;700;800&display=swap');
+
+* {
+    border: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serifs;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+html {
+    font-size: 63%;
+}
+
+body {
+    color: #fff;
+}
+
+header {
+    align-items: center;
+    background: #1f242d;
+    border-radius: 3px;
+    box-shadow: 0 7px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    margin: 0 auto;
+    padding: 2rem 9%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+
+.my-name {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+nav a {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 3.5rem;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav a.selected,
+nav a:hover {
+    color: #ef6817;
+}
+
+#sandwich-menu {
+    display: none;
+    font-size: 4rem;
+}
+
+section {
+    background: #1f242d;
+    height: 100%;
+    padding: 10rem 9% 2rem;
+    position: absolute;
+    width: 100%;
+}
+
+.about-me {
+    align-items: center;
+    display: flex;
+    gap: 5rem;
+    padding-bottom: 30rem;
+}
+
+
+.about-me-first h1 {
+    animation: rainbow 5s linear infinite;
+    background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    background-size: 400% 400%;
+    background-clip: text;
+    color: transparent;
+    font-size: clamp(3.5rem, 10vw, 5.5rem);
+    /* Responsive font size */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.about-me-first p {
+    font-size: 1.6rem;
+    margin: 1rem 0 2.5rem;
+}
+
+.about-me-first h2 {
+    display: inline-block;
+    font-size: 2.8rem;
+    margin-top: -1rem;
+}
+
+.about-me-first .btn-info {
+    align-items: center;
+    display: flex;
+}
+
+
+.btn {
+    background: #ef6817;
+    border: 0.2rem solid #ef6817;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #ef6817;
+    color: #1f242d;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1rem 3rem;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: transparent;
+    box-shadow: none;
+    color: #ef6817;
+}
+
+
+/*******************************************************************************************************/
+/*************************************** Resume Page *********************************************/
+/*******************************************************************************************************/
+/*******************************************************************************************************/
+.resume-style {
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    height:fit-content;
+    width: 100%;
+}
+
+.resume-grid {
+    border-left: 2px solid #FFF;
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+.resume-style h2 {
+    color: #11a372;
+    font-size: 3rem;
+    padding: 0px 0px 10px 4rem;
+}
+
+.resume-style h3 {
+    font-size: 1.8rem;
+    font-size: 19px;
+}
+
+.resume-style h4 {
+    color: #323946;
+    font-size: 1.8rem;
+}
+
+.resume-style p {
+    font-size: 12px;
+}
+
+.resume-style .resume-grid .box-resume:hover {
+    border: 1px solid transparent;
+    box-shadow: 0px 3px 12px 0px #ccc;
+}
+
+.resume-style .resume-grid .box-resume {
+    background-color: #ef6817;
+    border: 0.05px solid #c72929;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    padding: 30px;
+    position: relative;
+    transition: all 0.4s;
+}
+
+.resume-style .resume-grid .box-resume:before {
+    background-color: #11a372;
+    border: 2px solid white;
+    border-radius: 50%;
+    content: '';
+    height: 16px;
+    position: absolute;
+    right: calc(100% + 22px);
+    top: 0;
+    width: 16px;
+}
+
+
+.box-resume p {
+    font-size: 1.7rem;
+}
+
+.box-resume ul li {
+    background-color: #11a372;
+    width: fit-content;
+}
+
+/*******************************************************************************************************/
+/*************************************** Skills Page *********************************************/
+/*******************************************************************************************************/
+/*******************************************************************************************************/
+.heading,
+.heading-work {
+    color: #fff;
+    font-size: 2.1rem;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.heading-work {
+    font-size: 3rem;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.heading span {
+    color: #797575;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.skills-list-language {
+    align-items: center;
+    background-color: #323946;
+    border: 1px solid #ef6817;
+    border-radius: 8px;
+    color: #ef6817;
+    display: flex;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list-language:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.skills-list-language img {
+    height: 32px;
+    margin-right: 20px;
+    width: 32px;
+}
+
+.skills-list-language span {
+    color: #ef6817;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Default styling for the skills list container */
+.skills-list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    height: 45rem;
+    overflow: auto;
+}
+
+.skills .skills-list .skills-list-language i {
+    animation: slide-left-skills 1.5s ease-out forwards;
+    opacity: 0;
+    position: relative;
+}
+
+.skills-list .skills-list-language img {
+    animation: slide-left-skills 2.5s ease-out forwards;
+    opacity: 0;
+}
+
+
+/* Define the slide-up animation */
+@keyframes slide-left-skills {
+    from {
+        transform: translateX(-1000%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.skills-list .skills-list-language {
+    background-color: #323946;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    height: calc((45rem - 2rem) / 2);
+    justify-content: center;
+    padding: 3rem 2.5rem;
+}
+
+.details .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    height: auto;
+    overflow: visible;
+}
+
+.details .skills-list .skills-list-language {
+    align-items: center;
+    height: auto;
+    position: relative;
+}
+
+.details .skills-list .skills-list-language i {
+    font-size: 8.5rem;
+    transition: 0.5s;
+}
+
+.details .skills-list .skills-list-language:hover {
+    color: #ef6817;
+}
+
+
+/*******************************************************************************************************/
+/*************************************** Portfolio Page *********************************************/
+/*******************************************************************************************************/
+/*******************************************************************************************************/
+.container {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.portfolio-list {
+    display: none;
+    position: relative;
+    animation: slide-left 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+.portfolio-list.show {
+    display: block;
+}
+
+.box h3 {
+    font-size: 3.5rem;
+    margin: 0.8rem 0 2rem;
+}
+
+.box p {
+    font-size: 1.6rem;
+}
+
+.box .lang-used p {
+    background-color: rgba(124, 240, 61, 0.1);
+    border-bottom: 0.1rem solid #fff;
+    border-radius: 0.9rem;
+    color: #ef6817;
+    display: inline-block;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    padding-bottom: 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.box .lang-used p:hover {
+    background-color: rgba(124, 240, 61, 0.2);
+    transform: translateY(-5px);
+}
+
+.box .get-project a {
+    background: #323946;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-flex;
+    font-size: 3rem;
+    padding: 1.3rem;
+    position: relative;
+    transition: 0.7s;
+}
+
+.box .get-project a:first-child {
+    margin-right: 1.5em;
+}
+
+.box .get-project a:first-child i {
+    transform: rotate(135deg);
+}
+
+.box .get-project a:hover {
+    color: #fff;
+}
+
+.box .get-project a span {
+    background: #fff;
+    border-radius: 0.6rem;
+    color: #1f242d;
+    font-size: 1.6rem;
+    opacity: 0;
+    padding: 0.5rem 1rem;
+    pointer-events: none;
+    position: absolute;
+    top: -60%;
+    transform: translateX(-50%) scale(0.9);
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.box .get-project a:hover span {
+    opacity: 1;
+    top: -70%;
+    transform: translateX(-50%) scale(0.9);
+}
+
+/*************** Navigation ****************************/
+.box .navigation {
+    margin-top: -6rem;
+    text-align: right;
+}
+
+.box .navigation button {
+    background: #323946;
+    border: 0.2rem solid #ef6817;
+    border-radius: 1.3rem;
+    color: #ef6817;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 2.2rem;
+    padding: 1.8rem;
+}
+
+.box .navigation button.stop {
+    border-color: #323946;
+    color: #fff3;
+}
+
+.box .navigation .arrow-right {
+    margin-left: 1.5rem;
+}
+
+/****************** Portfolio Images ****************************/
+.box .portfolio-image {
+    border-radius: 1rem;
+    height: 45rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.portfolio-image .portfolio-image-list {
+    display: grid;
+    gap: 2rem;
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
+    height: inherit;
+    transition: 0.5s;
+}
+
+.portfolio-image .portfolio-image-list-picture {
+    height: inherit;
+}
+
+.portfolio-image .portfolio-image-list-picture img {
+    border-radius: 1rem;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 85%;
+}
+
+.arrow-left,
+.arrow-right,
+.get-project a {
+    position: relative;
+    z-index: 10;
+}
+
+/* Define the slide-up animation */
+@keyframes slide-left {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/*******************************************************************************************************/
+/*************************************** Contact Page *********************************************/
+/*******************************************************************************************************/
+/*******************************************************************************************************/
+.contact-display {
+    align-items: center;
+    display: grid;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.first-title {
+    margin-bottom: 200px;
+}
+
+.first-title h2 {
+    color: #11a372;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.first-title p {
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 26px;
+    margin-bottom: 3.8rem;
+}
+
+.left-column {
+    border-radius: 10px;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    width: 10%;
+    animation: slide-down 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+.second-title form {
+    position: relative;
+}
+
+.second-title form input,
+form textarea {
+    background: #323946;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    outline: none;
+    padding: 17px;
+    width: 800%;
+}
+
+.second-title textarea {
+    height: 200px;
+    resize: none;
+}
+
+.second-title form .btn-submit {
+    background: #ef6817;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: ease .20s;
+    width: 170px;
+}
+
+.second-title form .btn-submit:hover {
+    background: transparent;
+    border: 2px solid #ef6817;
+    transform: scale(1.1);
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    margin-top: 1rem;
+}
+
+.contact-icons a {
+    align-items: center;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #ef6817;
+    transform: scale(1.1);
+}
+
+.contact-icons a img {
+    height: 50px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+/* General styling for the right-column */
+.right-column {
+    animation: slide-up 1.9s ease-out forwards;
+    opacity: 0;
+    position: relative;
+}
+
+/* Define the slide-up animation */
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General styling for the left-column */
+.left-column {
+    animation: slide-down 1.2s ease-out forwards;
+    opacity: 0;
+    position: relative;
+}
+
+/* Define the slide-up animation */
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*******************************************************************************************************/
+/*************************************** Screen size Media *********************************************/
+/*******************************************************************************************************/
+/*******************************************************************************************************/
+
+@media (max-width: 1570px) {
+    body {
+        background: #1f242d;
+    }
+
+    header {
+        align-items: center;
+        background: #1f242d;
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+        position: fixed;
+        padding: 2rem 9%;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0 7px 6px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        margin: -1px auto;
+    }
+
+    .contact-display {
+        grid-gap: 2rem;
+        transition: 0.3s;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+
+    section {
+        padding: 80px 9% 0;
+        transition: 0.2s;
+    }
+
+    .first-title h2 {
+        font-size: 60px;
+    }
+
+    .first-title p {
+        margin-bottom: 3rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .box{
+        width: 100%;
+    }
+
+    .box .navigation {
+        margin-bottom: 70px;
+    }
+
+    .box .portfolio-list {
+        width: 100%;
+    }
+
+
+    .portfolio-image .portfolio-image-list-picture img {
+        display: block;
+        width: 95%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+    .resume-grid {
+        padding-bottom: 5rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    #sandwich-menu {
+        display: block;
+    }
+
+    body {
+        background: #1f242d;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background: #1f242d;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        text-align: center;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        margin: 4rem 0;
+    }
+
+    .portfolio-image .portfolio-image-list-picture img {
+        display: block;
+        width: 78%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        background: #1f242d;
+    }
+
+    .skills-style {
+        margin-top: 50px;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .details .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-me-first h1 {
+        margin-top: 70%;
+    }
+
+    .box .portfolio-image {
+        width: 120%;
+        height: 45rem;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    section {
+        padding: 80px 10% 0;
+        transition: 0.2s;
+    }
+
+    .contact-display {
+        grid-template-columns: 1fr;
+        left: -4%;
+    }
+
+    .first-title .second-title {
+        order: 2;
+    }
+
+    .second-title form {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .box .navigation {
+        text-align: right;
+        margin-bottom: 8rem;
+    }
+
+    .box .navigation button {
+        display: inline-flex;
+        padding: 1.8rem;
+        background: #323946;
+        border: 0.2rem solid #ef6817;
+        border-radius: 1.3rem;
+        font-size: 2.2rem;
+        color: #ef6817;
+        cursor: pointer;
+    }
+
+    .heading,
+    .heading-work {
+        margin-left: 6rem;
+        text-align: left;
+    }
+
+    .contact-display {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        grid-gap: 1rem;
+        width: 100%;
+        min-height: 100vh;
+        margin: 10px 3rem 0;
+    }
+
+    .left-column {
+        margin-top: -10rem;
+    }
+
+    .second-title form .btn-submit {
+        margin-bottom: 120px;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-style {
+        margin: 5rem 0px 0px 0px;
+        padding: 30px;
+        width: 100%;
+    }
+}
+
+
+/* Styling for unordered list */
+ul {
+    list-style-type: none;
+    /* Removes default list bullets */
+    padding-left: 0;
+}
+
+/* Styling for each list item */
+ul li {
+    background-color: rgb(15, 14, 14);
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #ef6817;
+    /* Green color for accent */
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 1.4rem;
+}
+
+/* Bold text inside list item */
+ul li strong {
+    color: #ef6817;
+}
+
+
+.footer {
+    background-color: #1f242d;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --main-color: #ef6817;
+    --white-color: #fff;
+    --disabled-color: #fff3;
+}
